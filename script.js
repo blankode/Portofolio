@@ -1,6 +1,6 @@
-let cards = 7;
-let buttons = 12;
-let separators = 2;
+let cards = 8;
+let buttons = 13;
+let separators = 1;
 
 function changeLight(type) {
   let cycleButton = document.getElementById('lightCycle');
@@ -19,6 +19,15 @@ function changeLight(type) {
     let content = document.getElementById('content');
     content.style.backgroundImage = ('url(./img/bg-night.png)')
     content.style.color = 'white';
+	//change bio
+	const tableElement = document.querySelector('table.bio');
+	tableElement.classList.replace('bio', 'bio2');
+	//change body bg
+	var body = document.body;
+	body.style.backgroundImage = "url('./img/background2.jpg')";
+	//change avatar
+	var imgElement = document.getElementById('avatar');
+	imgElement.src = './img/avatar2.png';
     for (let i = 0; i < cards; ++i) {
       let card = document.getElementById('card-white');
       card.style.backgroundColor = 'black';
@@ -52,6 +61,15 @@ function changeLight(type) {
     let content = document.getElementById('content');
     content.style.backgroundImage = ('url(./img/bg-day.png)')
     content.style.color = 'black';
+	//change bio
+	const tableElement = document.querySelector('table.bio2');
+	tableElement.classList.replace('bio2', 'bio');
+	//change body bg
+	var body = document.body;
+	body.style.backgroundImage = "url('./img/background.jpg')";
+	//change avatar
+	var imgElement = document.getElementById('avatar');
+	imgElement.src = './img/avatar.png';
     for (let i = 0; i < cards; ++i) {
       let card = document.getElementById('card-black');
       card.style.backgroundColor = 'white';
@@ -89,3 +107,21 @@ function scaleToFill() {
 
   });    
 }
+
+function isDarkMode() {
+	return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
+
+function updateModeStatus() {
+	const statusElement = document.getElementById('mode-status');
+	if (isDarkMode()) {
+		//console.log("Dark mode is enabled");
+		changeLight(0)
+	} else {
+		//console.log("Dark mode is not enabled");
+		changeLight(1)
+	}
+}
+
+const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+darkModeMediaQuery.addEventListener('change', updateModeStatus);

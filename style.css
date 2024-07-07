@@ -9,6 +9,13 @@
     background-size: cover;
 }
 
+.bio2 {
+    width: 100%;
+    background-image: url('./img/video2.gif');
+    background-position: center;
+    background-size: cover;
+}
+
 .bio-text {
     color: white;
 }
