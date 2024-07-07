@@ -1,97 +1,96 @@
-.body-bg {
-
-}
+.body-bg {}
 
 .bio {
-    width: 100%;
-    background-image: url('./img/video.gif');
-    background-position: center;
-    background-size: cover;
+	width: 100%;
+	background-image: url('./img/video.gif');
+	background-position: center;
+	background-size: cover;
 }
 
 .bio2 {
-    width: 100%;
-    background-image: url('./img/video2.gif');
-    background-position: center;
-    background-size: cover;
+	width: 100%;
+	background-image: url('./img/video2.gif');
+	background-position: center;
+	background-size: cover;
 }
 
 .bio-text {
-    color: white;
+	color: white;
 }
 
 .avatar {
-    border: 3px dashed black;
-    border-radius: 50%;
+	border: 3px dashed black;
+	border-radius: 50%;
 	width: 256px;
 	height: 256px;
 }
 
 table {
-    width: auto;
+	width: auto;
 }
 
 .title {
-    margin-top: 25px;
-    margin-bottom: 25px;
-    width: 100%;
-    display: block;
-    background-color: lightgray;
-    border: 1px solid lightgray;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	width: 100%;
+	display: block;
+	background-color: lightgray;
+	border: 1px solid lightgray;
 }
 
 body {
-    font-family: 'Roboto Mono', monospace;
-    background-image: url('./img/background.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	font-family: 'Roboto Mono', monospace;
+	background-image: url('./img/background.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 footer {
-    padding-bottom: 15px;
-    font-size: 13px;
+	padding-bottom: 15px;
+	font-size: 13px;
 }
 
-tr, td {
-    padding: 25px;
+tr,
+td {
+	padding: 25px;
 }
 
 .card-img-top {
-    padding: 10px;
+	padding: 10px;
 }
 
 .container-bg {
-    padding-top: 25px;
-    border-radius: 20px;
-    background-image: url('./img/bg-day.png');
+	padding-top: 25px;
+	border-radius: 20px;
+	background-image: url('./img/bg-day.png');
 }
 
 .navbar-bg {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 
-.dropdown-bg {                                                                  
+.dropdown-bg {}
 
-}
-
-.dropdown-item-bg:hover {                                                                  
-
-}
+.dropdown-item-bg:hover {}
 
 .btn-light {
-    margin-right: 50px;
-    width: 40px;
-    height: 40px;
-    background-image: url('./img/bg-day.png');
-    border-radius: 50%;
+	margin-right: 50px;
+	width: 40px;
+	height: 40px;
+	background-image: url('./img/bg-day.png');
+	border-radius: 50%;
 }
 
 .btn-dark {
-    margin-right: 50px;
-    width: 40px;
-    height: 40px;
-    background-image: url('./img/bg-night.png');
-    border-radius: 50%;
+	margin-right: 50px;
+	width: 40px;
+	height: 40px;
+	background-image: url('./img/bg-night.png');
+	border-radius: 50%;
+}
+
+.nav-link {
+	color: white;
 }
