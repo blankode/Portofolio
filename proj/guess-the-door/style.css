@@ -1,0 +1,25 @@
+.content-bg {
+    background-image: linear-gradient(pink,white,pink);
+    border-radius: 10px;
+}
+
+.card-bg {
+    background-image: linear-gradient(white,pink,white);
+    border-radius: 10px;
+    height: 190px;
+}
+
+.button-bg {
+    background-image: radial-gradient(pink,white);
+    border: 1px solid;
+}
+
+.button-bg-wrong {
+    background-image: radial-gradient(pink,red);
+    border: 1px solid;
+}
+
+.button-bg-winner {
+    background-image: radial-gradient(pink,gold);
+    border: 1px solid;
+}

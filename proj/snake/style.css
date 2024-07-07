@@ -1,0 +1,70 @@
+html {
+    height: 100%;
+}
+
+body {
+    color: black;
+    margin-top: 50px;
+    background-color: #9AC503;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:auto;
+}
+
+table {
+    border: 5px solid black;
+    overflow: hidden;
+}
+
+tr, td {
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+}
+
+hr {
+    border: 5px solid black;
+}
+
+.container-bg {
+    border: 5px solid black;
+    padding: 10px;
+    width: 650px;
+}
+
+.button-bg {
+    border: 5px solid black;
+    padding: 5px;
+    font-weight: bolder;
+}
+
+.button-bg:hover {
+    border: 5px solid #9AC503;
+    background-color: black;
+    color: #9AC503;
+}
+
+.alert-bg {
+    background-color: black;
+    border-radius: 0px;
+    color: #9AC503;
+}
+
+.head {
+    background-color: black;
+    border-radius: 5px;
+}
+
+.body {
+    background-color: black;
+    border-radius: 5px;
+}
+
+.tail {
+    background-color: black;
+    border-radius: 5px;
+}
+
+.food {
+    background-image: url('./img/point.png');
+}
