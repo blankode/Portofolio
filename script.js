@@ -132,6 +132,3 @@ function updateModeStatus() {
         changeLight(1)
     }
 }
-
-const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-darkModeMediaQuery.addEventListener('change', updateModeStatus);
