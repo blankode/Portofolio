@@ -16,6 +16,8 @@
 .avatar {
     border: 3px dashed black;
     border-radius: 50%;
+	width: 256px;
+	height: 256px;
 }
 
 table {
