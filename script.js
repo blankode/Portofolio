@@ -132,3 +132,10 @@ function updateModeStatus() {
         changeLight(1)
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const cursor = document.getElementById('blinking-cursor');
+
+    // Add the blinking animation class
+    cursor.classList.add('blink');
+});
