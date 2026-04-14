@@ -1,345 +1,275 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poroșnicu Bogdan - Software Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
-    <link id="favicon" rel="icon" type="image/x-icon" href="./img/favicon-day.png">
-    <title>Poroșnicu Bogdan - Software Developer</title>
-    <script src="./script.js"></script>
-  </head>
-  <body class="body-bg" onload="updateModeStatus()">
-    <nav id="navbar" class="container navbar navbar-expand-lg navbar-light navbar-bg">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <figure class="text-end">
-            <blockquote class="blockquote">
-              <p>Poroșnicu Bogdan</p>
-            </blockquote>
-            <figcaption id="sub-title" class="blockquote-footer" style="font-size: small; color:#20393e;"> Software Developer </cite>
-            </figcaption>
-          </figure>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
-                <i class="bi bi-file-earmark-person-fill"></i> Home </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-file-earmark-code-fill"></i> Projects </a>
-              <ul class="dropdown-menu dropdown-bg" aria-labelledby="navbarDropdownMenuLink">
-                <li>
-                  <a class="dropdown-item dropdown-item-bg" href="./proj/snake" target="_blank">Classic Snake</a>
-                </li>
-                <li>
-                  <a class="dropdown-item dropdown-item-bg" href="./proj/tic-tac-toe" target="_blank">TIC-TAC-TOE</a>
-                </li>
-                <li>
-                  <a class="dropdown-item dropdown-item-bg" href="./proj/hangman" target="_blank">Hangman</a>
-                </li>
-                <li>
-                  <a class="dropdown-item dropdown-item-bg" href="./proj/dictionary" target="_blank">Dictionary</a>
-                </li>
-                <li>
-                  <a class="dropdown-item dropdown-item-bg" href="./proj/guess-the-door" target="_blank">Guess-the-Door</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-tools"></i> Tools </a>
-              <ul class="dropdown-menu dropdown-bg" aria-labelledby="navbarDropdownMenuLink">
-                <li>
-                  <a class="dropdown-item dropdown-item-bg" target="_blank" href="http://github.com/blankode/ytxi" target="_blank">YTXI</a>
-                </li>
-                <li>
-                  <a class="dropdown-item dropdown-item-bg" target="_blank" href="https://github.com/blankode/GTA-V-SSA/" target="_blank">GTA-V-SSA</a>
-                </li>
-                <li>
-                  <a class="dropdown-item dropdown-item-bg" target="_blank" href="https://github.com/blankode/GINA/" target="_blank">G.I.N.A.</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="http://github.com/blankode" target="_blank">
-                <i class="bi bi-github"></i> GitHub </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="https://www.linkedin.com/in/bogdan-porosnicu/" target="_blank">
-                <i class="bi bi-linkedin"></i> LinkedIn </a>
-            </li>
-          </ul>
-          <span class="position-absolute top-50 start-100 translate-middle">
-            <button type="button" id="lightCycle" class="btn btn-light" onclick="changeLight(0)">
-              <i class="bi bi-sunglasses"></i>
-            </button>
-          </span>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-name">Poroșnicu Bogdan</span>
+                <span class="nav-title">Software Developer</span>
+            </div>
+            
+            <div class="nav-links">
+                <button class="nav-link" onclick="scrollToSection('home')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <span>Home</span>
+                </button>
+
+                <div class="dropdown">
+                    <button class="nav-link dropdown-toggle">
+                        <span>Projects</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu" id="projectsMenu">
+                        <a href="https://blankode.github.io/Portofolio/proj/snake" target="_blank" class="dropdown-item">Classic Snake</a>
+                        <a href="https://blankode.github.io/Portofolio/proj/tic-tac-toe" target="_blank" class="dropdown-item">TIC-TAC-TOE</a>
+                        <a href="https://blankode.github.io/Portofolio/proj/hangman" target="_blank" class="dropdown-item">Hangman</a>
+                        <a href="https://blankode.github.io/Portofolio/proj/dictionary" target="_blank" class="dropdown-item">Dictionary</a>
+                        <a href="https://blankode.github.io/Portofolio/proj/guess-the-door" target="_blank" class="dropdown-item">Guess the Door</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="nav-link dropdown-toggle">
+                        <span>Tools</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu" id="toolsMenu">
+                        <a href="http://github.com/blankode/ytxi" target="_blank" class="dropdown-item">YTXI</a>
+                        <a href="https://github.com/blankode/GTA-V-SSA/" target="_blank" class="dropdown-item">GTA-V-SSA</a>
+                        <a href="https://github.com/blankode/GINA/" target="_blank" class="dropdown-item">G.I.N.A.</a>
+                    </div>
+                </div>
+
+                <a href="https://github.com/blankode" target="_blank" class="nav-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.linkedin.com/in/bogdan-porosnicu/" target="_blank" class="nav-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+
+                <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
+                    <svg class="theme-icon sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="theme-icon moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
-      </div>
     </nav>
-    <div id="content" class="container container-bg">
-      <center>
-        <h1 class="display-5">Hello there<div id="blinking-cursor">_</div></h1>
-        <h5 class="display-6" style="font-size: 20px;">Check out my projects in the dropdown menu above or below. </h5>
-        <table style="width: 100%;">
-          <tr>
-            <td>
-              <hr>
-            </td>
-          </tr>
-        </table>
-        <div class="container main-container">
-          <table class="bio">
-            <tr>
-              <td width="350px"></td>
-              <td>
-                <img id="avatar" class="avatar" src="./img/avatar.png">
-              </td>
-              <td class="bio-text">
-                <h4>
-                  <strong>Bio</strong>
-                </h4>
-                <p>My name is Poroșnicu Bogdan and <strong>I create software from scratch</strong>. </p>
-              </td>
-              <td width="350px"></td>
-            </tr>
-          </table>
+
+    <!-- Background -->
+    <div class="background"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="hero-title">Hello there<span class="cursor">_</span></h1>
+            <p class="hero-subtitle">Check out my projects in the dropdown menu above or below.</p>
         </div>
-        <table style="width: 100%;">
-          <tr>
-            <td>
-              <hr>
-            </td>
-            <td style="width: 1px;">
-              <h3>
-                <strong>Projects</strong>
-              </h3>
-            </td>
-            <td>
-              <hr>
-            </td>
-          </tr>
-        </table>
-        <table>
-          <tr>
-            <td>
-              <div id="card-white" class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Classic Snake</h5>
-                  <p class="card-text">
-                  <ul>
-                    <li>Minigame</li>
-                    <li>Built with JavaScript, HTML, CSS</li>
-                  </ul>
-                  </p>
-                  <span style="margin-left: 78%;" class="position-absolute top-100 translate-middle">
-                    <a id="button-white" href="https://www.github.com/blankode/snake" target="_blank" class="btn btn-dark">
-                      <i class="bi bi-code-slash"></i>
-                    </a>
-                  </span>
-                  <span class="position-absolute top-100 start-100 translate-middle">
-                    <a id="button-white" href="./proj/snake" target="_blank" class="btn btn-dark">
-                      <i class="bi bi-eye"></i>
-                    </a>
-                  </span>
+    </section>
+
+    <!-- Bio Section -->
+    <section class="bio">
+        <div class="container">
+            <div class="bio-card">
+                <div class="bio-background" id="bioBackground"></div>
+                <div class="bio-overlay"></div>
+                <div class="bio-content">
+                    <div class="bio-avatar-container">
+                        <div class="bio-avatar">
+                            <img src="https://customer-assets.emergentagent.com/job_portfolio-forge-71/artifacts/t1uim673_1753187707596.jpeg" alt="Poroșnicu Bogdan">
+                        </div>
+                    </div>
+                    <div class="bio-text">
+                        <h2>Bio</h2>
+                        <p>My name is Poroșnicu Bogdan and <strong>I create software from scratch</strong>.</p>
+                    </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div id="card-white" class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">TIC-TAC-TOE</h5>
-                  <p class="card-text">
-                  <ul>
-                    <li>Minigame</li>
-                    <li>Built with JavaScript, HTML, CSS</li>
-                  </ul>
-                  </p>
-                  <span style="margin-left: 78%;" class="position-absolute top-100 translate-middle">
-                    <a id="button-white" href="https://www.github.com/blankode/tic-tac-toe" target="_blank" class="btn btn-dark">
-                      <i class="bi bi-code-slash"></i>
-                    </a>
-                  </span>
-                  <span class="position-absolute top-100 start-100 translate-middle">
-                    <a id="button-white" href="./proj/tic-tac-toe" target="_blank" class="btn btn-dark">
-                      <i class="bi bi-eye"></i>
-                    </a>
-                  </span>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div id="card-white" class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Hangman</h5>
-                  <p class="card-text">
-                  <ul>
-                    <li>Minigame</li>
-                    <li>Built with JavaScript, HTML, CSS</li>
-                  </ul>
-                  </p>
-                  <span style="margin-left: 78%;" class="position-absolute top-100 translate-middle">
-                    <a id="button-white" href="https://www.github.com/blankode/hangman" target="_blank" class="btn btn-dark">
-                      <i class="bi bi-code-slash"></i>
-                    </a>
-                  </span>
-                  <span class="position-absolute top-100 start-100 translate-middle">
-                    <a id="button-white" href="./proj/hangman" target="_blank" class="btn btn-dark">
-                      <i class="bi bi-eye"></i>
-                    </a>
-                  </span>
-                </div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div id="card-white" class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Dictionary</h5>
-                  <p class="card-text">
-                  <ul>
-                    <li>Tool</li>
-                    <li>Built with JavaScript, HTML, CSS</li>
-                  </ul>
-                  </p>
-                  <span style="margin-left: 78%;" class="position-absolute top-100 translate-middle">
-                    <a id="button-white" href="https://www.github.com/blankode/dictionary" target="_blank" class="btn btn-dark">
-                      <i class="bi bi-code-slash"></i>
-                    </a>
-                  </span>
-                  <span class="position-absolute top-100 start-100 translate-middle">
-                    <a id="button-white" href="./proj/dictionary" target="_blank" class="btn btn-dark">
-                      <i class="bi bi-eye"></i>
-                    </a>
-                  </span>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div id="card-white" class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Guess the Door</h5>
-                  <p class="card-text">
-                  <ul>
-                    <li>Minigame</li>
-                    <li>Built with JavaScript, HTML, CSS</li>
-                  </ul>
-                  </p>
-                  <span style="margin-left: 78%;" class="position-absolute top-100 translate-middle">
-                    <a id="button-white" href="https://www.github.com/blankode/guess-the-door" target="_blank" class="btn btn-dark">
-                      <i class="bi bi-code-slash"></i>
-                    </a>
-                  </span>
-                  <span class="position-absolute top-100 start-100 translate-middle">
-                    <a id="button-white" href="./proj/guess-the-door" target="_blank" class="btn btn-dark">
-                      <i class="bi bi-eye"></i>
-                    </a>
-                  </span>
-                </div>
-              </div>
-            </td>
-            <!--
-                    <td><div id="card-white" class="card" style="width: 18rem;"><div class="card-body"><h5 class="card-title">YTXI</h5><p class="card-text"><ul><li>youtube-dl Extension</li><li>Built with AutoIT</li></ul></p><span class="position-absolute top-100 start-100 translate-middle"><a id="button-white" href="https://github.com/blankode/ytxi/" target="_blank"
-                                        class="btn btn-dark"><i class="bi bi-code-slash"></i></a></span></div></div></td>
-					-->
-          </tr>
-        </table>
-        <table style="width: 100%;">
-          <tr>
-            <td>
-              <hr>
-            </td>
-            <td style="width: 1px;">
-              <h3>
-                <strong>Tools</strong>
-              </h3>
-            </td>
-            <td>
-              <hr>
-            </td>
-          </tr>
-        </table>
-        <table>
-          <tr>
-            <td>
-              <div id="card-white" class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">YTXI</h5>
-                  <p class="card-text">
-                  <ul>
-                    <li>youtube-dl Extension</li>
-                    <li>Built with AutoIT</li>
-                  </ul>
-                  </p>
-                  <span class="position-absolute top-100 start-100 translate-middle">
-                    <a id="button-white" href="https://github.com/blankode/ytxi/" target="_blank" class="btn btn-dark">
-                      <i class="bi bi-code-slash"></i>
-                    </a>
-                  </span>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div id="card-white" class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">GTA-V-SSA</h5>
-                  <p class="card-text">
-                  <ul>
-                    <li>GTA V Anti AFK</li>
-                    <li>Built with AutoIT</li>
-                  </ul>
-                  </p>
-                  <span class="position-absolute top-100 start-100 translate-middle">
-                    <a id="button-white" href="https://github.com/blankode/GTA-V-SSA/" target="_blank" class="btn btn-dark">
-                      <i class="bi bi-code-slash"></i>
-                    </a>
-                  </span>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div id="card-white" class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">G.I.N.A.</h5>
-                  <p class="card-text">
-                  <ul>
-                    <li>Tool</li>
-                    <li>Built with AutoIT, HTML, CSS</li>
-                  </ul>
-                  </p>
-                  <span class="position-absolute top-100 start-100 translate-middle">
-                    <a id="button-white" href="https://www.github.com/blankode/gina" target="_blank" class="btn btn-dark">
-                      <i class="bi bi-code-slash"></i>
-                    </a>
-                  </span>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </table>
-        <hr id="separator-white">
-      </center>
-    </div>
-    <footer class="container">
-      <center> @Copyright blankode <span id="year"></span>
-      </center>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-line"></div>
+                <h2>Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="grid">
+                <a href="https://blankode.github.io/Portofolio/proj/snake" target="_blank" class="card">
+                    <div class="card-header">
+                        <h3>Classic Snake</h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-item"><span class="dot"></span>Minigame</div>
+                        <div class="card-item"><span class="dot"></span>Built with JavaScript, HTML, CSS</div>
+                    </div>
+                </a>
+
+                <a href="https://blankode.github.io/Portofolio/proj/tic-tac-toe" target="_blank" class="card">
+                    <div class="card-header">
+                        <h3>TIC-TAC-TOE</h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-item"><span class="dot"></span>Minigame</div>
+                        <div class="card-item"><span class="dot"></span>Built with JavaScript, HTML, CSS</div>
+                    </div>
+                </a>
+
+                <a href="https://blankode.github.io/Portofolio/proj/hangman" target="_blank" class="card">
+                    <div class="card-header">
+                        <h3>Hangman</h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-item"><span class="dot"></span>Minigame</div>
+                        <div class="card-item"><span class="dot"></span>Built with JavaScript, HTML, CSS</div>
+                    </div>
+                </a>
+
+                <a href="https://blankode.github.io/Portofolio/proj/dictionary" target="_blank" class="card">
+                    <div class="card-header">
+                        <h3>Dictionary</h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-item"><span class="dot"></span>Tool</div>
+                        <div class="card-item"><span class="dot"></span>Built with JavaScript, HTML, CSS</div>
+                    </div>
+                </a>
+
+                <a href="https://blankode.github.io/Portofolio/proj/guess-the-door" target="_blank" class="card">
+                    <div class="card-header">
+                        <h3>Guess the Door</h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-item"><span class="dot"></span>Minigame</div>
+                        <div class="card-item"><span class="dot"></span>Built with JavaScript, HTML, CSS</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="tools">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-line"></div>
+                <h2>Tools</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="grid">
+                <a href="http://github.com/blankode/ytxi" target="_blank" class="card">
+                    <div class="card-header">
+                        <h3>YTXI</h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-item"><span class="dot"></span>youtube-dl Extension</div>
+                        <div class="card-item"><span class="dot"></span>Built with AutoIT</div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/blankode/GTA-V-SSA/" target="_blank" class="card">
+                    <div class="card-header">
+                        <h3>GTA-V-SSA</h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-item"><span class="dot"></span>GTA V Anti AFK</div>
+                        <div class="card-item"><span class="dot"></span>Built with AutoIT</div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/blankode/GINA/" target="_blank" class="card">
+                    <div class="card-header">
+                        <h3>G.I.N.A.</h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-item"><span class="dot"></span>Tool</div>
+                        <div class="card-item"><span class="dot"></span>Built with AutoIT, HTML, CSS</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Portfolio. Built with HTML, CSS & JavaScript.</p>
     </footer>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  </body>
+
+    <script src="script.js"></script>
+</body>
 </html>
