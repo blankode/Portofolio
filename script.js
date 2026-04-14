@@ -22,8 +22,8 @@ function updateBioBackground() {
     
     if (bioBackground) {
         const gifUrl = isDark 
-            ? 'https://raw.githubusercontent.com/blankode/Portofolio/main/img/video2.gif'
-            : 'https://raw.githubusercontent.com/blankode/Portofolio/main/img/video.gif';
+            ? 'https://raw.githubusercontent.com/blankode/Portofolio/main/v1/img/video2.gif'
+            : 'https://raw.githubusercontent.com/blankode/Portofolio/main/v1/img/video.gif';
         
         bioBackground.style.backgroundImage = `url(${gifUrl})`;
     }
